@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Downloading Searope War...</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #1a1a2e;
+            color: white;
+            text-align: center;
+        }
+        .container {
+            padding: 2rem;
+            border-radius: 15px;
+            background: #16213e;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .loader {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #3498db;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        a {
+            color: #4cc9f0;
+            text-decoration: none;
+            font-weight: bold;
+            border: 1px solid #4cc9f0;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        a:hover {
+            background: #4cc9f0;
+            color: #1a1a2e;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Your download is starting...</h1>
+        <div class="loader"></div>
+        <p>If the download doesn't start automatically, 
+           <br><br>
+           <a id="downloadLink" href="searope%20war.html" download="Searope War.html">Click here to download manually</a>
+        </p>
+    </div>
+
+    <script>
+        // Function to trigger the download automatically
+        window.onload = function() {
+            const link = document.getElementById('downloadLink');
+            
+            // Short delay to let the page load visually first
+            setTimeout(() => {
+                link.click();
+            }, 1000); 
+        };
+    </script>
+
+</body>
+</html>
