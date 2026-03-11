@@ -1,17 +1,18 @@
 {
-  "background_color": "#ffffff",
-  "dir": "ltr",
-  "display": "standalone",
   "name": "Searope War",
-  "orientation": "landscape",
-  "scope": "/",
   "short_name": "Searope War",
-  "start_url": "/index.html",
-  "theme_color": "#ffffff",
-  "description": "Searope War",
-  "id": "searopewarbluecube5998games",
-  "lang": "en",
-  "categories": [
-    "games"
+  "id": "com.bluecube5998.searopewar",
+  "start_url": "index.html",
+  "display": "standalone",
+  "orientation": "landscape",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
   ]
 }
