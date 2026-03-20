@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Searope War</title>
     <style>
-        /* Centers the game on the phone screen and adds a black background */
+        /* 1. Black background to blend with phone bezels */
         body, html {
             margin: 0;
             padding: 0;
@@ -18,16 +18,17 @@
             overflow: hidden;
         }
 
-        /* The 16:9 (640x360) Responsive Container */
-        .game-wrapper {
-            position: relative;
+        /* 2. This container stretches to the display size but keeps the 16:9 ratio */
+        .game-container {
             width: 100vw;
-            height: 56.25vw; /* Math: (360 / 640) * 100 */
+            height: 56.25vw; /* Maintain 640x360 proportion */
             max-height: 100vh;
-            max-width: 177.78vh; /* Math: (640 / 360) * 100 */
+            max-width: 177.78vh; /* Prevent stretching wider than 16:9 */
+            position: relative;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5); /* Adds a slight depth */
         }
 
-        /* Makes the game fill the wrapper exactly */
+        /* 3. The iframe fills the container perfectly */
         iframe {
             position: absolute;
             top: 0;
@@ -40,7 +41,7 @@
 </head>
 <body>
 
-    <div class="game-wrapper">
+    <div class="game-container">
         <iframe 
             src="https://bluecube5998.github.io/searope-war/searope%20war.html" 
             allowfullscreen
