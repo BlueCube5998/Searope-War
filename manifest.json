@@ -1,18 +1,17 @@
 {
+  "background_color": "#ffffff",
+  "dir": "ltr",
+  "display": "fullscreen",
   "name": "Searope War",
-  "short_name": "Searope War",
-  "id": "com.bluecube5998.searopewar",
-  "start_url": "index.html",
-  "display": "standalone",
   "orientation": "landscape",
-  "background_color": "#000000",
-  "theme_color": "#000000",
-  "icons": [
-    {
-      "src": "icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any maskable"
-    }
+  "scope": "/",
+  "short_name": "Searope War",
+  "start_url": "/index.html",
+  "theme_color": "#ffffff",
+  "id": "com.bluecube5998.searopewar",
+  "description": "Watch players lower someone's ropes.",
+  "lang": "en",
+  "categories": [
+    "games"
   ]
 }
