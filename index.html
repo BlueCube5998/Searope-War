@@ -4,31 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="manifest" href="manifest.json">
-    <title>Searope War - Loading</title>
+    <title>Redirecting...</title>
     <style>
-        body { font-family: sans-serif; display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh; margin: 0; background-color: #f4f4f9; text-align: center; }
+        body { font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; background-color: #f4f4f9; }
         p { color: #555; }
-        .version { font-size: 0.8rem; color: #999; margin-top: 10px; }
     </style>
 </head>
 <body>
-    <p>Launching <strong>Searope War</strong>...</p>
-    <p class="version">Version 0.3.0</p>
+    <p>Redirecting to <strong>Searope War</strong>...</p>
 
     <script>
-        // 1. Register the Service Worker for offline support
+        // 1. Register the Service Worker (The "Offline Engine")
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('./sw.js')
-                .then(reg => console.log('SW Registered'))
-                .catch(err => console.log('SW Failed', err));
+                .then(() => console.log("Offline mode active"))
+                .catch(err => console.log("Offline mode failed", err));
         }
 
-        // 2. Optimized Redirect Logic
-        // We use a slight delay to ensure the SW registration starts, 
-        // then we redirect to the local file path so it works offline.
+        // 2. Redirect using a RELATIVE path for offline support
         setTimeout(function() {
-            window.location.href = "./searope war.html";
-        }, 800);
+            window.location.href = "./searope war.html"; 
+        }, 1000);
     </script>
 </body>
 </html>
